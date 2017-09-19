@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Add a contact us page
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+link in nav bar
+    to seperate page
+Create contact model
+    Name (string)
+    e-mail address (string)
+    body/message (text)
+    subject (string)
+form with inputs
+    use simple form gem (put into contacts.new)
+    
+input fields into database
+provide message back to user 
