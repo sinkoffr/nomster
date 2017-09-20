@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
     root 'places#index'
     
-    resources :contacts, only: [:new]
+    resources :contacts, only: [:new, :create]
     # Other options: :index, :show, :edit, :create, :destroy
     
     resources :places
