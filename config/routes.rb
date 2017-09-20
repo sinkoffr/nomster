@@ -4,4 +4,6 @@ Rails.application.routes.draw do
     root 'places#index'
     resources :contacts, only: [:new]
     # Other options: :index, :show, :edit, :create, :destroy
+    
+    resources :places
 end

@@ -62,3 +62,5 @@ source 'https://rails-assets.org' do
 end
 
 gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
+
+gem 'simple_form'
