@@ -15,6 +15,6 @@ Create contact model [x]
 form with inputs [x]
     use simple form gem (put into contacts.new)
     
-input fields into database []
+input fields into database [x]
 
 provide message back to user []

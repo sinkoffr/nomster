@@ -9,14 +9,18 @@ class ContactsController < ApplicationController
     end
     
     def create
-        Contact.create(contact_params)
-        redirect_to root_path
+        @contact = Contact.new(contact_params)
+        if @contact.valid?
+            redirect_to root_path
+        else
+            render text: 'Please try again', status: :not_found
+        end
     end
     
     private
     
     def contact_params
-        params.require(:contact).permit(:name, :address, :subject, :message)
+        params.require(:contact).permit(:name, :email, :subject, :message)
     end
     
 end
