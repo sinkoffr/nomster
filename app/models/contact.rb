@@ -1,7 +1,6 @@
 class Contact < ApplicationRecord
-    validates :name, presence: true
-    validates :email, presence: true
-    validates :message, presence: true
+    validates :name, :email, :message, presence: true
+    
     def new
         @contact = Contact.new
     end
