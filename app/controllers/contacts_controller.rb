@@ -13,7 +13,7 @@ class ContactsController < ApplicationController
         if @contact.valid?
             redirect_to root_path
         else
-            render text: 'Please try again', status: :not_found
+            render :new, status: :not_found
         end
     end
     
