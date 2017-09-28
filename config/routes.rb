@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     resources :contacts, only: [:new, :create]
     # Other options: :index, :show, :edit, :create, :destroy
     
-    resources :places
+    resources :places do
+      resources :comments, only: :create
+    end
+    
     
 end
