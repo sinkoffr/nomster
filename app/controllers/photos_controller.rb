@@ -4,7 +4,7 @@ class PhotosController < ApplicationController
     def create
         @place = Place.find(params[:place_id])
         @place.photos.create(photo_params)
-        redirect_to root_path
+        redirect_to Place.find(params[:place_id])
     end
     
     private
