@@ -1,4 +1,5 @@
 <%= paginate @places, outer_window: 3 %>
+
 <% @places.each do |place| %>
 
   <div class="booyah-box col-10 offset-1">
@@ -6,9 +7,10 @@
     <i><%= place.address %></i><br /><br />
     
     <% if place.photos.present? %>
-        <% if place.photos.last.present? %>
-          <img><%= place.photos.last %></img>
-        <% end %>
+      <% place.photos.each do |photo| %> 
+        <%= image_tag photo.picture %>
+        <br />
+      <% end %>
     <% end %>
     
     <p><%= place.description %></p><br />
@@ -17,17 +19,17 @@
       <small><%= place.user.email %></small>
     <% end %>
    
-  <% if place.comments.present? %> 
-    <div class="col-12">
-      <blockquote>
-          <% if place.comments.last.humanized_rating.present? %>
-            <b><%= place.comments.last.humanized_rating %></b> -
-          <% end %>
-          <%= place.comments.last.message %>
-          <small><%= place.comments.last.user.email %></small>
-      </blockquote>
-    </div>
-  <% end %>
+    <% if place.comments.present? %> 
+      <div class="col-12">
+        <blockquote>
+            <% if place.comments.last.humanized_rating.present? %>
+              <b><%= place.comments.last.humanized_rating %></b> -
+            <% end %>
+            <%= place.comments.last.message %>
+            <small><%= place.comments.last.user.email %></small>
+        </blockquote>
+      </div>
+    <% end %>
   
   </div>
   
