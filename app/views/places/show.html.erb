@@ -33,21 +33,20 @@
     
     <% end %>
     
-   <br />
+    <br />
    
     <div class="float-right">
-        <% if current_user && current_user == @place.user %>
-            <!--Button trigger modal-->
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
-                Add a Comment
-            </button>
-            <!--Button trigger modal-->
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myPhotoModal">
-                Add a Photo
-            </button>
+        <!--Button trigger modal-->
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+            Add a Comment
+        </button>
+        <!--Button trigger modal-->
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myPhotoModal">
+            Add a Photo
+        </button>
+        <% if current_user && current_user == @place.user %>        
             <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-default' %>
             <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this entry?'},class: 'btn btn-danger' %>
-        
         <% end %>
     </div>
     <br class="clear" />
@@ -71,7 +70,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <%= f.submit "Add a Comment", class: 'btn btn-default' %>
+                <%= f.submit "Add Comment", class: 'btn btn-default' %>
             </div>
             <% end %>
         </div>
@@ -81,6 +80,7 @@
 <br class="clear" />
 
 <div class="row">
+<h1 class="col-10 offset-1">Comments</h1>
 <% @place.comments.each do |comment| %>
     <div class="col-12 col-sm-6">
         <blockquote>
@@ -113,20 +113,22 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <%= f.submit "Add a Photo", class: 'btn btn-default' %>
+                <%= f.submit "Add Photo", class: 'btn btn-default' %>
             </div>
         <% end %>
         </div>
     </div>
 </div>
 
-
-<%= @place.photos.each do |photo| %>
-    <%= image_tag photo.picture %>
-    <%= photo.caption %>
-    <br /><br />
-<% end %>
-<br />
+<div class="col-10 offset-1">
+    <h1>Photos</h1>
+    <br />
+    <% @place.photos.each do |photo| %>
+        <%= image_tag photo.picture %>
+        <%= photo.caption %>
+        <br /><br />
+    <% end %>
+    <br />
 </div>
 
 
