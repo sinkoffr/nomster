@@ -37,12 +37,12 @@
     <h1><%= link_to place.name, place_path(place) %></h1>
     <i><%= place.address %></i><br /><br />
     
-    <% if place.photos.present? %>
-      <% place.photos.each do |photo| %> 
-        <%= image_tag photo.picture %>
-        <br />
-      <% end %>
+   
+    <% place.photos.each do |photo| %> 
+      <%= image_tag photo.picture %>
+      <br />
     <% end %>
+
     
     <p><%= place.description %></p><br />
     
