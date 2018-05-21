@@ -1,4 +1,4 @@
-<div class="booyah-box col-8 offset-2">
+<div class="booyah-box col-8 offset-2 dark-box">
     
     <h1>New Contact</h1>
     <%= simple_form_for @contact do |f| %>
@@ -6,6 +6,6 @@
         <%= f.input( :email) %>
         <%= f.input( :subject) %>
         <%= f.input( :message) %>
-        <%= f.submit 'Submit' %>
+        <%= f.submit 'Submit', class: 'btn btn-primary' %>
         <% end %>
 </div>
