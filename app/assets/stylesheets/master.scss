@@ -92,16 +92,11 @@ a.navbar-brand {
     margin-right: 5px;
 }
 
-.btn-default {
-    background-color:#D1DEBF;
-    color: black;
-    border-color: purple;
-}
-
 .btn.btn-primary {
    background-color: #69f3a7bf;
     border-color: #778c96;
     font-weight: bold;
+    letter-spacing: 0.1em;
 }
 
 .help-block {
@@ -209,6 +204,5 @@ blockquote p {
 
 .dark-box {
     background-color: #778c96;
-    // background-color: #9a979761;
     border: none;
 }
