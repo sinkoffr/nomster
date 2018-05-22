@@ -1,20 +1,15 @@
 # README
 
-Add a contact us page [x]
+A Yelp clone built as part of the Firehose Project bootcamp.
 
+https://nomster-rs.herokuapp.com/
 
-link in nav bar [x]
-    to seperate page
+Features Include:
+    submission forms
+    a display carousel
+    pagination
+    user signin/signup/signout
+    picture uploading
+    Google Map API integration
+    comments/ratings for places
     
-Create contact model [x]
-    Name (string)
-    e-mail address (string)
-    body/message (text)
-    subject (string)
-    
-form with inputs [x]
-    use simple form gem (put into contacts.new)
-    
-input fields into database [x]
-
-provide message back to user []
