@@ -41,8 +41,6 @@ body {
     background-color: #778c96 !important;
     font-family: 'Cabin Sketch', cursive;
     font-size: 60px;
-    // margin: 5px 30px 5px 10px;
-    
 }
 
 .bg-inverse {
@@ -51,7 +49,6 @@ body {
 
 .navbar-inverse .navbar-nav>li>a {
     color: #66f3a6fa !important;
-    
 }    
 
 .nav-link {
@@ -64,11 +61,11 @@ a.navbar-brand {
     font-size: 24px;
 }
 
-.pagination {
+a .pagination {
     word-spacing: 5px;
     padding-top: 10px;
     margin: 5px;
-
+    color: #778c96;
 }
 
 .prev {
@@ -139,18 +136,12 @@ blockquote p {
   display: inline;
 }
 
-// img {
-//     width: 50%;
-//     border-radius: 2px;
-//     height: 300px;
-// }
 .carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
     max-height: 257px;
-    width: 95%;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 3px;
-
 }
 
 .carousel-indicators {
