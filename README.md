@@ -2,7 +2,6 @@
 
 A Yelp clone built as part of the Firehose Project bootcamp.
 
-https://nomster-rs.herokuapp.com/
 
 Features Include:                                                                     
     submission forms, 
